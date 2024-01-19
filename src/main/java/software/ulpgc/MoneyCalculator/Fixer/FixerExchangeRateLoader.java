@@ -30,7 +30,7 @@ public class FixerExchangeRateLoader implements ExchangeRateLoader {
     }
 
     private String loadJson(String from, String to) throws IOException {
-        URL url = new URL("http://data.fixer.io/api/latest?access_key=" + FixerAPI.exhangeRateKey);
+        URL url = new URL("http://data.fixer.io/api/latest?access_key=" + FixerAPI.key);
         try (InputStream is = url.openStream()) {
             return new String(is.readAllBytes());
         }
